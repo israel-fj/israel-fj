@@ -11,7 +11,7 @@
 <meta name="revisit-after" content="2 days" /> 
 <meta name="category" content="Prácticas" /> 
 <!-- Declaración de fichero de estilos --> 
-<link rel="stylesheet" type="text/css" href="estilos/estilos.css"> 
+<link rel="stylesheet" type="text/css" href="css/estilos.css"> 
 <title>Práctica 4 - Sitio Web</title> 
 </head> 
 <body> 
@@ -32,7 +32,7 @@
 		<a href="porfolio.html" class="div_menu">Porfolio</a> 
 		</span> 
 		<span class="boton"> 
-		<a href="presupuestos.html" class="div_menu">Presupuestos</a> 
+		<a href="presupuestos.html" class="div_menu activo">Presupuestos</a> 
 		</span> 
 		<span class="boton"> 
 		<a href="contacto.html" class="div_menu">Contacto</a> 
@@ -53,32 +53,30 @@
             <!-- Nombre -->
             <label for="nombre">Nombre:</label>
             <input type="text" id="nombre" name="nombre" required>
-            <br><br>
     
             <!-- Apellidos -->
-            <label for="Apellidos">Apellidos:</label>
+            <label for="apellidos">Apellidos:</label>
             <input type="text" id="apellidos" name="apellidos" required>
-            <br><br>
     
             <!-- Teléfono -->
             <label for="telefono">Teléfono:</label>
-            <input type="tel" id="telefono" name="telefono" required>
-            <br><br>
+            <input type="tel" id="telefono" name="telefono" required pattern="\d{9}" title="El teléfono debe ser un número de al menos 9 dígitos">
 
             <!-- Email -->
             <label for="email">Correo Electrónico:</label>
-            <input type="email" id="email" name="email" required>
-            <br><br>
+            <input type="email" id="email" name="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required title="Introduce un correo electrónico válido">
 
             <!-- mas info -->
             <label for="masinfo"> Solicite más información:</label>
-            <textarea rows="3" id="masinfo" name="masinfo" required>Solicite más información</textarea>
-            <br><br>
+            <textarea rows="3" id="masinfo" name="masinfo" required></textarea>
 
             <!-- Aceptación de Términos -->
+    <div>
+        <label for="terminos"> <!-- Se corrige el `for` para que coincida con el id -->
             <input type="checkbox" id="terminos" name="terminos" required>
-            <label for="terminos">Acepto los términos y condiciones</label>
-            <br><br>
+            Acepto los términos y condiciones
+        </label>
+    </div>
 
             <!-- Botón de Envío -->
             <button type="submit">Enviar</button>
@@ -87,10 +85,10 @@
  </article> 
  </section> 
  <footer>
-	<a href="https://www.facebook.com" target="_blank"><img src="./img/facebook.png" alt="Facebook"></a>
-	<a href="https://www.instagram.com" target="_blank"></a><img src="./img/instagram.png" alt="Instagram"></a>
-	<a href="https://www.vimeo.com" target="_blank"></a><img src="./img/vimeo.png" alt="Vimeo"></a>
-c/ Inventada, 13. 41099, Sevilla - <a href="#">Aviso Legal</a>
- </footer> 
+	<a href="https://www.facebook.com" target="_blank"><img src="./img/facebook.png" alt="Facebook" width="512" height="512"></a>
+	<a href="https://www.instagram.com" target="_blank"><img src="./img/instagram.png" alt="Instagram" width="512" height="512"></a>
+	<a href="https://www.vimeo.com" target="_blank"><img src="./img/vimeo.png" alt="Vimeo" width="512" height="512"></a>
+	<p>c/ Inventada, 13. 41099, Sevilla - <a href="#">Aviso Legal</a></p>
+</footer> 
 </body>
 </html>
